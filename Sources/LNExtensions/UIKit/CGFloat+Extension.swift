@@ -8,7 +8,7 @@
 #if !os(macOS)
 import UIKit
 
-extension CGFloat {
+public extension CGFloat {
     /**
      The relative dimension to the corresponding screen size.
      

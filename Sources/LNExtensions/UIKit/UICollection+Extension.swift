@@ -60,7 +60,7 @@ public extension UICollectionViewCell {
             parentView = parentView?.superview
         }
 
-        return parentView  as? UICollectionView
+        return parentView as? UICollectionView
     }
 
     class func registerNib(to collectionView: UICollectionView) {
