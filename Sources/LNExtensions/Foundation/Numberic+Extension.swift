@@ -79,10 +79,3 @@ public extension Int {
 public extension Int64 {
     var intValue: Int { return Int(self) }
 }
-
-public extension NSUIEdgeInsets {
-    var inverted: NSUIEdgeInsets {
-        return NSUIEdgeInsets(top: -top, left: -left, bottom: -bottom, right: -right)
-    }
-}
-

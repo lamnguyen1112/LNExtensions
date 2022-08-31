@@ -179,14 +179,12 @@ public extension String {
 
 // MARK: - URL
 public extension String {
-    public extension String {
-        var encodeUrlPercentEncoding: String {
-            return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? self
-        }
-        
-        func encodeUrl(_ characterSet: CharacterSet = .urlFragmentAllowed) -> String {
-            return self.addingPercentEncoding(withAllowedCharacters: characterSet) ?? self
-        }
+    var encodeUrlPercentEncoding: String {
+        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? self
+    }
+    
+    func encodeUrl(_ characterSet: CharacterSet = .urlFragmentAllowed) -> String {
+        return self.addingPercentEncoding(withAllowedCharacters: characterSet) ?? self
     }
 }
 
