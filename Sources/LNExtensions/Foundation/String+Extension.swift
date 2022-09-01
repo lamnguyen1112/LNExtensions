@@ -19,19 +19,6 @@ public extension String {
         if (string == nil) { return true }
         return string!.trimmingCharacters(in: trimCharacters) == ""
     }
-    
-//    func getDynamicHeight(withFont: NSUIFont) -> CGFloat {
-//        return self.nsString.size(withAttributes: [NSAttributedString.Key.font: withFont]).height
-//    }
-            
-    func addSpaces(_ forMaxLenght: Int) -> String {
-        if self.length >= forMaxLenght { return self }
-        var result = self
-        for _ in 0..<(forMaxLenght - self.length) {
-            result.append(" ")
-        }
-        return result
-    }
 }
 
 // MARK: - Index
@@ -94,6 +81,15 @@ public extension String {
     
     func deleteSub(_ subStringToDelete: String) -> String {
         return self.replacingOccurrences(of: subStringToDelete, with: "")
+    }
+    
+    func addSpaces(_ forMaxLenght: Int) -> String {
+        if self.length >= forMaxLenght { return self }
+        var result = self
+        for _ in 0..<(forMaxLenght - self.length) {
+            result.append(" ")
+        }
+        return result
     }
 }
 
