@@ -12,6 +12,10 @@ public extension UIViewController {
         return String(describing: self)
     }
     
+    class var storyboardID: String {
+        return "\(self)"
+    }
+    
     // return an instance UIViewController from storyboard with class name identifier
     class func instantiate(_ storyboard: UIStoryboard) -> Self {
         return storyboard.viewController(identifier: classIdentifier)
